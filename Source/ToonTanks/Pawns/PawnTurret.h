@@ -5,8 +5,10 @@
 #include "CoreMinimal.h"
 #include "PawnBase.h"
 #include "PawnTurret.generated.h"
+#include "ToonTanks/GameModes/TankGameInstance.h"
 
 class APawnTank;
+class ATankGameInstance;
 
 UCLASS()
 class TOONTANKS_API APawnTurret : public APawnBase
@@ -26,6 +28,9 @@ private:
 	void CheckFireCondition();
 
 	float ReturnDistanceToPlayer();	
+
+	ATankGameInstance* GameInstanceRef;
+
 
 public:
 	// Called every frame

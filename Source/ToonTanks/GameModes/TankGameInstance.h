@@ -21,7 +21,7 @@ private:
 	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Score", meta = (AllowPrivateAccess = "true"))
 	int32 GameScore = 0;
 
-	void UpdateScore(int32 Value);
+	void IncrementScore(int32 Value);
 
 	UFUNCTION(BlueprintCallable)
 	int32 GetScore();

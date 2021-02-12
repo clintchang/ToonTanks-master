@@ -4,7 +4,7 @@
 #include "TankGameInstance.h"
 
 
-void UTankGameInstance::UpdateScore(int32 Value) 
+void UTankGameInstance::IncrementScore(int32 Value) 
 {
     GameScore = GameScore + Value;
 }

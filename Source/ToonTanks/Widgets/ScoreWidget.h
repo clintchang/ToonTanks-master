@@ -17,16 +17,19 @@ class TOONTANKS_API UScoreWidget : public UUserWidget
 
 public:
 
-	UFUNCTION(BlueprintCallable)
-	void CallBoop();
+	//test functions not needed
+	// UFUNCTION(BlueprintCallable)
+	// void CallBoop();
 
-	UFUNCTION(BlueprintCallable)
-	int32 GetBoop();
+	//test functions not needed
+	// UFUNCTION(BlueprintCallable)
+	// int32 GetBoop();
 
 private:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score", meta = (AllowPrivateAccess = "true"))
-	int32 Boop = 333;
+	//test functions not needed
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score", meta = (AllowPrivateAccess = "true"))
+	// int32 Boop = 333;
 
 
 

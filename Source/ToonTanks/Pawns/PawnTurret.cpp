@@ -14,12 +14,22 @@ void APawnTurret::BeginPlay()
 
     PlayerPawn = Cast<APawnTank>(UGameplayStatics::GetPlayerPawn(this, 0));
 
+    //get reference to the game instance
+    //Get the world->game instance and cast to UTankGameInstance
+    GameInstanceRef = Cast<UTankGameInstance>(UGameplayStatics::GetWorld()->GetGameInstance());
 }
 
 void APawnTurret::HandleDestruction() 
 {
     // Call base pawn class HandleDestruction to play effects.    
     Super::HandleDestruction();
+
+    //update score on death
+    if (GameInstanceRef != nullptr)
+	{	
+        UE_LOG(LogTemp, Warning, TEXT("DESTRUCTION"));
+    }
+
     Destroy();
 }
 

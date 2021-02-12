@@ -4,12 +4,12 @@
 #include "ScoreWidget.h"
 
 
-int32 UScoreWidget::GetBoop() 
-{
-    return Boop;
-}
+// int32 UScoreWidget::GetBoop() 
+// {
+//     return Boop;
+// }
 
-void UScoreWidget::CallBoop() 
-{
-    UE_LOG(LogTemp, Warning, TEXT("CallBoop"));
-}
+// void UScoreWidget::CallBoop() 
+// {
+//     UE_LOG(LogTemp, Warning, TEXT("CallBoop"));
+// }
