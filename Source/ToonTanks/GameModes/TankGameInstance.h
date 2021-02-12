@@ -16,12 +16,12 @@ class TOONTANKS_API UTankGameInstance : public UGameInstance
 
 
 public:
+	void IncrementScore(int32 Value);
 
 private:
 	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Score", meta = (AllowPrivateAccess = "true"))
 	int32 GameScore = 0;
 
-	void IncrementScore(int32 Value);
 
 	UFUNCTION(BlueprintCallable)
 	int32 GetScore();

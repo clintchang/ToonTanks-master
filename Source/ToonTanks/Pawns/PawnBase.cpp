@@ -53,6 +53,7 @@ void APawnBase::Fire()
 
 void APawnBase::HandleDestruction() 
 {
+	//UE_LOG(LogTemp, Warning, TEXT("DESTRUCTION- C")) //DEBUG
 	// --- Universal functionality ---
 	// Play death effects particle, sound and camera shake. 
 	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation());

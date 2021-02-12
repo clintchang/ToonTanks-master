@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
-#include "PawnTurret.h"
 #include "Kismet/GameplayStatics.h"
 #include "PawnTank.h"
+#include "PawnTurret.h"
 
 // Called when the game starts or when spawned
 void APawnTurret::BeginPlay()
@@ -16,19 +15,18 @@ void APawnTurret::BeginPlay()
 
     //get reference to the game instance
     //Get the world->game instance and cast to UTankGameInstance
-    GameInstanceRef = Cast<UTankGameInstance>(UGameplayStatics::GetWorld()->GetGameInstance());
+    GameInstanceRef = Cast<UTankGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 }
 
 void APawnTurret::HandleDestruction() 
 {
-    // Call base pawn class HandleDestruction to play effects.    
-    Super::HandleDestruction();
-
     //update score on death
     if (GameInstanceRef != nullptr)
 	{	
-        UE_LOG(LogTemp, Warning, TEXT("DESTRUCTION"));
+        GameInstanceRef->IncrementScore(ScoreValue);
     }
+    // Call base pawn class HandleDestruction to play effects.    
+    Super::HandleDestruction();
 
     Destroy();
 }

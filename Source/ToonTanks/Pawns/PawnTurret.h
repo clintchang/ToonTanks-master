@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "PawnBase.h"
-#include "PawnTurret.generated.h"
 #include "ToonTanks/GameModes/TankGameInstance.h"
+#include "PawnTurret.generated.h"
 
 class APawnTank;
 class ATankGameInstance;
@@ -21,6 +21,8 @@ private:
 	float FireRate = 2.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	float FireRange = 500.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score", meta = (AllowPrivateAccess = "true"))
+	int32 ScoreValue = 60;
 
 	FTimerHandle FireRateTimerHandle;
 	APawnTank *PlayerPawn;
@@ -29,7 +31,7 @@ private:
 
 	float ReturnDistanceToPlayer();	
 
-	ATankGameInstance* GameInstanceRef;
+	UTankGameInstance* GameInstanceRef;
 
 
 public:
