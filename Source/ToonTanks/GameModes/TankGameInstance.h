@@ -23,6 +23,7 @@ private:
 
 	void UpdateScore(int32 Value);
 
+	UFUNCTION(BlueprintCallable)
 	int32 GetScore();
 
 protected:

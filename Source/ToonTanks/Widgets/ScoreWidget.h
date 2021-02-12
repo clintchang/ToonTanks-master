@@ -13,5 +13,23 @@ UCLASS()
 class TOONTANKS_API UScoreWidget : public UUserWidget
 {
 	GENERATED_BODY()
+
+
+public:
+
+	UFUNCTION(BlueprintCallable)
+	void CallBoop();
+
+	UFUNCTION(BlueprintCallable)
+	int32 GetBoop();
+
+private:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score", meta = (AllowPrivateAccess = "true"))
+	int32 Boop = 333;
+
+
+
+protected:
 	
 };

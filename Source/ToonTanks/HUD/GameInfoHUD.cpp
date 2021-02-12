@@ -15,17 +15,21 @@ AGameInfoHUD::AGameInfoHUD()
 
 void AGameInfoHUD::DrawHUD() 
 {
-    UE_LOG(LogTemp, Warning, TEXT("Drawing")); //debug line
+    //UE_LOG(LogTemp, Warning, TEXT("Drawing")); //DEBUG LINE
 }
 
 void AGameInfoHUD::BeginPlay() 
 {
     Super::BeginPlay();
 
+	// .cpp - create the widget from the given class
+    //CurrentWidget = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), ScoreWidget.class);   
+
 	if (ScoreWidgetClass != nullptr)
 	{	
 
-		UE_LOG(LogTemp, Warning, TEXT("CREATE THE WIDGET"));
+		//UE_LOG(LogTemp, Warning, TEXT("CREATE THE WIDGET")); //DEBUG LINE
+		
         // .cpp - create the widget from the given class
         CurrentWidget = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), ScoreWidgetClass);   
 
