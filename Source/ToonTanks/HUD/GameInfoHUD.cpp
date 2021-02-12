@@ -7,29 +7,16 @@
 
 AGameInfoHUD::AGameInfoHUD() 
 {
-
     static ConstructorHelpers::FClassFinder<UUserWidget> ScoreWidgetObj(TEXT("/Game/Blueprints/Widgets/WBP_ScoreWidget"));
 	ScoreWidgetClass = ScoreWidgetObj.Class;
-
 }
 
-void AGameInfoHUD::DrawHUD() 
-{
-    //UE_LOG(LogTemp, Warning, TEXT("Drawing")); //DEBUG LINE
-}
 
 void AGameInfoHUD::BeginPlay() 
 {
     Super::BeginPlay();
-
-	// .cpp - create the widget from the given class
-    //CurrentWidget = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), ScoreWidget.class);   
-
 	if (ScoreWidgetClass != nullptr)
 	{	
-
-		//UE_LOG(LogTemp, Warning, TEXT("CREATE THE WIDGET")); //DEBUG LINE
-		
         // .cpp - create the widget from the given class
         CurrentWidget = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), ScoreWidgetClass);   
 
@@ -38,6 +25,8 @@ void AGameInfoHUD::BeginPlay()
 			CurrentWidget->AddToViewport();
 		}
 	}
-
 }
 
+void AGameInfoHUD::DrawHUD() 
+{
+}
