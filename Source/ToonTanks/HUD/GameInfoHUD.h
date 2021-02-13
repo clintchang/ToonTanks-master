@@ -37,8 +37,6 @@ public:
 	class UScoreWidget* ScoreWidgetRef;
 
 	
-
-
 private:
 
 	// UPROPERTY(EditAnywhere, Category = "Health")
@@ -47,5 +45,6 @@ private:
 	// UPROPERTY(EditAnywhere, Category = "Health")
 	// class UUserWidget* CurrentWidget;
 
+	TArray<UObject*> WidgetArray;
 
 };

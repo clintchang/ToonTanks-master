@@ -16,7 +16,8 @@ void APawnTurret::BeginPlay()
     //get reference to the game instance
     //Get the world->game instance and cast to UTankGameInstance
     GameInstanceRef = Cast<UTankGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
-
+    
+    //get the HUD From the palyercontroller. the hud we'll tell to update the score
     HUDRef = Cast<AGameInfoHUD>(GetWorld()->GetFirstPlayerController()->GetHUD());
 }
 
