@@ -17,17 +17,24 @@ void APawnTurret::BeginPlay()
     //Get the world->game instance and cast to UTankGameInstance
     GameInstanceRef = Cast<UTankGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 
-    HUDRef = Cast<GameInfoHUD>(GetWorld()->GetFirstPlayerController()->GetHUD());
+    HUDRef = Cast<AGameInfoHUD>(GetWorld()->GetFirstPlayerController()->GetHUD());
 }
 
 void APawnTurret::HandleDestruction() 
 {
+
+    //UE_LOG(LogTemp, Warning, TEXT("HandleDestruction"));
     //update score on death
     if (GameInstanceRef != nullptr)
 	{	
         GameInstanceRef->IncrementScore(ScoreValue);
+
+        //UE_LOG(LogTemp, Warning, TEXT("Increment Score call"));
         //tell HUD to update score
-        HUDRef->UpdateScore();
+        if (HUDRef != nullptr)
+        {
+            HUDRef->UpdateScore();
+        }
 
     }
     // Call base pawn class HandleDestruction to play effects.    

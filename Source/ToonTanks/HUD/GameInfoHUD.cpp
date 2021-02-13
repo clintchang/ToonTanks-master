@@ -36,7 +36,8 @@ void AGameInfoHUD::UpdateScore()
 	ScoreWidgetRef = Cast<UScoreWidget>(CurrentWidget);
 	if (ScoreWidgetRef != nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Hubbidy Dibbity Doo UPDATE SCORE IS CALLED!"));
+		//UE_LOG(LogTemp, Warning, TEXT("Hubbidy Dibbity Doo UPDATE SCORE IS CALLED!"));
+		ScoreWidgetRef->UpdateScore();
 
 	}
 	//tell the current widget to call its update score function
