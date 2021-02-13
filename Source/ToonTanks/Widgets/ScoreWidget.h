@@ -17,6 +17,9 @@ class TOONTANKS_API UScoreWidget : public UUserWidget
 
 public:
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void UpdateScore();
+
 	//test functions not needed
 	// UFUNCTION(BlueprintCallable)
 	// void CallBoop();

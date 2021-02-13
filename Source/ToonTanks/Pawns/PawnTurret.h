@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PawnBase.h"
+#include "ToonTanks/HUD/GameInfoHUD.h"
 #include "ToonTanks/GameModes/TankGameInstance.h"
 #include "PawnTurret.generated.h"
 
@@ -32,6 +33,8 @@ private:
 	float ReturnDistanceToPlayer();	
 
 	UTankGameInstance* GameInstanceRef;
+
+	AGameInfoHUD* HUDRef;
 
 
 public:

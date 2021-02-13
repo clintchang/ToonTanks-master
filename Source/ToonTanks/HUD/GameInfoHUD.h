@@ -24,11 +24,19 @@ public:
 
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	void UpdateScore();
+
+	//setting the score widget class in the HUD blueprint
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TSubclassOf<UUserWidget> ScoreWidgetClass;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class UUserWidget* CurrentWidget;
+
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	class UScoreWidget* ScoreWidgetRef;
+
+	
 
 
 private:

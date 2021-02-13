@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+// #include "ToonTanks/HUD/GameInfoHUD.h"
 #include "PawnBase.h"
 #include "PawnTank.generated.h"
 
@@ -36,6 +37,8 @@ private:
 
 	void Move();
 	void Rotate();
+
+	// AGameInfoHUD* HUDRef;
 
 public:
 
